@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "AgentFlow API",
+            "type": "debugpy",
+            "request": "launch",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "module": "uvicorn",
+            "args": [
+                "agentflow.api.main:create_app",
+                "--factory",
+                "--reload",
+                "--reload-dir",
+                "src",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "18080",
+                "--no-access-log"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "subProcess": true,
+            "justMyCode": true
+        }
+    ]
+}
